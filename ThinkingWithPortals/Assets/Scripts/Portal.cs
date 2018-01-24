@@ -6,7 +6,7 @@ public class Portal : MonoBehaviour {
 	[Header("Cameras")]
 	public Camera mainCam;
 	public Camera portalCam;
-    public string arworld1;
+   // public string arworld1;
    // public float coolDown = 1.0f;
    // private bool portalActive = true;
 
@@ -23,8 +23,8 @@ public class Portal : MonoBehaviour {
 	void OnTriggerEnter (Collider other) {
 		if (other.CompareTag ("MainCamera")) {
             // Use xor operator to toggle the ARWorld layer in the mainCam's culling mask.
-            mainCam.cullingMask ^= 1 << LayerMask.NameToLayer(arworld1);
-            portalCam.cullingMask ^= 1 << LayerMask.NameToLayer(arworld1);
+            mainCam.cullingMask ^= 1 << LayerMask.NameToLayer("ARWorld");
+            //portalCam.cullingMask ^= 1 << LayerMask.NameToLayer(arworld1);
            // portalActive = false;
            // StartCoroutine(CoolDown());
 		}
