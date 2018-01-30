@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 375233437}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -360,11 +360,6 @@ Transform:
   m_Father: {fileID: 539114360}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &54893626 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4933047950440512, guid: 17f4c02dcacb44c009f19b2da7b42e49,
-    type: 2}
-  m_PrefabInternal: {fileID: 130054675}
 --- !u!1 &57036708
 GameObject:
   m_ObjectHideFlags: 0
@@ -621,9 +616,17 @@ Prefab:
       propertyPath: m_Name
       value: Sphere
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 17f4c02dcacb44c009f19b2da7b42e49, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &130054676 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 130054675}
 --- !u!1 &148765019
 GameObject:
   m_ObjectHideFlags: 0
@@ -1398,8 +1401,9 @@ Transform:
   - {fileID: 455423746}
   - {fileID: 219294457}
   - {fileID: 2049612145}
-  - {fileID: 54893626}
+  - {fileID: 130054676}
   - {fileID: 31690900}
+  - {fileID: 1392347294}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2227,14 +2231,12 @@ VideoPlayer:
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources:
-  - {fileID: 0}
-  m_DirectAudioVolumes:
-  - 1
+  m_TargetAudioSources: []
+  m_DirectAudioVolumes: []
   m_Url: 
-  m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 00
-  m_ControlledAudioTrackCount: 1
+  m_EnabledAudioTracks: 
+  m_DirectAudioMutes: 
+  m_ControlledAudioTrackCount: 0
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 0
@@ -2444,14 +2446,12 @@ VideoPlayer:
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources:
-  - {fileID: 0}
-  m_DirectAudioVolumes:
-  - 1
+  m_TargetAudioSources: []
+  m_DirectAudioVolumes: []
   m_Url: 
-  m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 00
-  m_ControlledAudioTrackCount: 1
+  m_EnabledAudioTracks: 
+  m_DirectAudioMutes: 
+  m_ControlledAudioTrackCount: 0
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 0
@@ -2510,14 +2510,12 @@ VideoPlayer:
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources:
-  - {fileID: 0}
-  m_DirectAudioVolumes:
-  - 1
+  m_TargetAudioSources: []
+  m_DirectAudioVolumes: []
   m_Url: 
-  m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 00
-  m_ControlledAudioTrackCount: 1
+  m_EnabledAudioTracks: 
+  m_DirectAudioMutes: 
+  m_ControlledAudioTrackCount: 0
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 0
@@ -2809,6 +2807,104 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1380897043}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1392347293
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 539114360}
+    m_Modifications:
+    - target: {fileID: 400010, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.49999726
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.866027
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.47897357
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4789735
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4789735
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 60.000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
+  m_IsPrefabParent: 0
+--- !u!4 &1392347294 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 400010, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
+  m_PrefabInternal: {fileID: 1392347293}
 --- !u!1 &1421918680
 GameObject:
   m_ObjectHideFlags: 0
@@ -3371,14 +3467,12 @@ VideoPlayer:
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources:
-  - {fileID: 0}
-  m_DirectAudioVolumes:
-  - 1
+  m_TargetAudioSources: []
+  m_DirectAudioVolumes: []
   m_Url: 
-  m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 00
-  m_ControlledAudioTrackCount: 1
+  m_EnabledAudioTracks: 
+  m_DirectAudioMutes: 
+  m_ControlledAudioTrackCount: 0
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 1
@@ -4622,14 +4716,12 @@ VideoPlayer:
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources:
-  - {fileID: 0}
-  m_DirectAudioVolumes:
-  - 1
+  m_TargetAudioSources: []
+  m_DirectAudioVolumes: []
   m_Url: 
-  m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 00
-  m_ControlledAudioTrackCount: 1
+  m_EnabledAudioTracks: 
+  m_DirectAudioMutes: 
+  m_ControlledAudioTrackCount: 0
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 0
