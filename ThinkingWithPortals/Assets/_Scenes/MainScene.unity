@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 375233437}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -620,12 +620,17 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1208701469889512, guid: 17f4c02dcacb44c009f19b2da7b42e49, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 17f4c02dcacb44c009f19b2da7b42e49, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &130054676 stripped
 Transform:
-  m_PrefabParentObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 4933047950440512, guid: 17f4c02dcacb44c009f19b2da7b42e49,
+    type: 2}
   m_PrefabInternal: {fileID: 130054675}
 --- !u!1 &148765019
 GameObject:
@@ -2231,12 +2236,14 @@ VideoPlayer:
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
   m_Url: 
-  m_EnabledAudioTracks: 
-  m_DirectAudioMutes: 
-  m_ControlledAudioTrackCount: 0
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 0
@@ -2446,12 +2453,14 @@ VideoPlayer:
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
   m_Url: 
-  m_EnabledAudioTracks: 
-  m_DirectAudioMutes: 
-  m_ControlledAudioTrackCount: 0
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 0
@@ -2510,12 +2519,14 @@ VideoPlayer:
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
   m_Url: 
-  m_EnabledAudioTracks: 
-  m_DirectAudioMutes: 
-  m_ControlledAudioTrackCount: 0
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 0
@@ -2816,15 +2827,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400010, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.59
+      value: 1.7463
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.047
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.27
+      value: 2.91
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2832,7 +2843,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.49999726
+      value: 0.8660268
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
       propertyPath: m_LocalRotation.z
@@ -2840,7 +2851,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.866027
+      value: -0.49999762
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
       propertyPath: m_RootOrder
@@ -2848,19 +2859,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.47897357
+      value: 0.40990898
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.4789735
+      value: 0.40990892
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.4789735
+      value: 0.40990892
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 60.000004
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 100010, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
       propertyPath: m_IsActive
@@ -2897,6 +2908,10 @@ Prefab:
     - target: {fileID: 100014, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
       propertyPath: m_Layer
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab3ac30a2dcfbf44f822a386dfbdeff4, type: 3}
@@ -3467,12 +3482,14 @@ VideoPlayer:
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
   m_Url: 
-  m_EnabledAudioTracks: 
-  m_DirectAudioMutes: 
-  m_ControlledAudioTrackCount: 0
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 1
@@ -4367,6 +4384,19 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114523534181646484, guid: 59c7a9859314241f0ac2d97e1e87cc45,
+        type: 2}
+      propertyPath: portalCamLock
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1540287883706828, guid: 59c7a9859314241f0ac2d97e1e87cc45, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1959636499100510, guid: 59c7a9859314241f0ac2d97e1e87cc45, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 59c7a9859314241f0ac2d97e1e87cc45, type: 2}
   m_IsPrefabParent: 0
@@ -4716,12 +4746,14 @@ VideoPlayer:
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
   m_Url: 
-  m_EnabledAudioTracks: 
-  m_DirectAudioMutes: 
-  m_ControlledAudioTrackCount: 0
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
   m_Looping: 0

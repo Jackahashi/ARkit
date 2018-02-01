@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.iOS;
 
 public class Portal : MonoBehaviour {
 
@@ -9,8 +10,17 @@ public class Portal : MonoBehaviour {
 
     public bool portalCamLock = true;
 
+
+
+
+
+
+
+
   
 	void Update () {
+
+        
 
 		// Move portal camera position based on main camera distance from the portal - tested without this and potalcam Z axis still rotates
 		Vector3 cameraOffset = mainCam.transform.position - transform.position;
@@ -24,11 +34,13 @@ public class Portal : MonoBehaviour {
        // portalCam.transform.rotation.eulerAngles = new Vector3(mainCamRotation.x,mainCamRotation.y,0);
          
 
-        Debug.Log("portalcam Z rotation:  " + portalCam.transform.rotation.z);
+        //Debug.Log("portalcam Z rotation:  " + portalCam.transform.rotation.z);
+
+
+    
 
         if (portalCamLock)
         {
-           Debug.Log("locked");
 
             //-----------------------------------------------Attempt 1-----------------------------------------------------------
 
@@ -45,11 +57,13 @@ public class Portal : MonoBehaviour {
 
             var rotationVector = mainCam.transform.rotation.eulerAngles;
             rotationVector.z = 0;
+            //rotationVector.x = 0;
             portalCam.transform.rotation = Quaternion.Euler(rotationVector);
+            Debug.Log("portalcam Z rotation:  " + portalCam.transform.rotation.eulerAngles.z);
 
-            //------check out "input.devicerotation" --try logging maincam rotations 
-           
+            //-----------------------------------------------Attempt 4------------------------------------------------------------
 
+            //Quaternion deviceRotation = DeviceRotation.Get;
 
 
         }else{
@@ -57,6 +71,8 @@ public class Portal : MonoBehaviour {
             // Make portal cam face the same direction as the main camera.
             portalCam.transform.rotation = Quaternion.LookRotation(mainCam.transform.forward, Vector3.up);
         }
+        
+
 
 	}
 
