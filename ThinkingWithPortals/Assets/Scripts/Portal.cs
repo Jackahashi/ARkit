@@ -25,15 +25,18 @@ public class Portal : MonoBehaviour {
 
         if (portalCamLock)
         {
-            float xAngle = GetAngleByDeviceAxis(Vector3.forward);
+            float zAngle = GetAngleByDeviceAxis(Vector3.forward);
+            float xAngle = GetAngleByDeviceAxis(Vector3.right);
             //Debug.Log("Device Z axis is:" + (xAngle));
 
             // conerts quaternion maincam rotation to euler maincam rotation
-            // sets z axis of maincam rotation to inverse of xAngle, which is the inverse of device physical rotation
-            // portalcam rotation is set to the this new value, with the z value inverted. this also affects the x rotation.
+            // sets z axis of maincam rotation to inverse of xAngle, which should be the inverse of device physical rotation
+            // portalcam rotation is set to the this new value, with the z value inverted. this also affects the x rotation a bit
             var rotationVector = mainCam.transform.rotation.eulerAngles; 
-            rotationVector.z = xAngle;  
-            portalCam.transform.rotation = Quaternion.Euler(rotationVector.x,rotationVector.y,+rotationVector.z); //succeeded in making the camera rotate more! 90 degrees device rotation == 180 degrees portalcam rotation
+            rotationVector.z = zAngle;
+            rotationVector.x = xAngle;
+          
+            portalCam.transform.rotation = Quaternion.Euler(+rotationVector.x,rotationVector.y,+rotationVector.z); //succeeded in making the camera rotate more! 90 degrees device rotation == 180 degrees portalcam rotation
 
 
         }else{
