@@ -10,13 +10,6 @@ public class Portal : MonoBehaviour {
 
     public bool portalCamLock = true;
 
-
-
-
-
-
-
-
   
 	void Update () {
 
@@ -30,40 +23,17 @@ public class Portal : MonoBehaviour {
         //portalCam.transform.rotation = Quaternion.LookRotation(mainCam.transform.forward, Vector3.up);
 
 
-       // Vector3 mainCamRotation = mainCam.transform.rotation.eulerAngles;
-       // portalCam.transform.rotation.eulerAngles = new Vector3(mainCamRotation.x,mainCamRotation.y,0);
-         
-
-        //Debug.Log("portalcam Z rotation:  " + portalCam.transform.rotation.z);
-
-
-    
-
         if (portalCamLock)
         {
+            float xAngle = GetAngleByDeviceAxis(Vector3.forward);
+            //Debug.Log("Device Z axis is:" + (xAngle));
 
-            //-----------------------------------------------Attempt 1-----------------------------------------------------------
-
-            // convert the portalcam rotation to eulerangles, then lock the Z axis rotation to zero
-            //Vector3 portalCamRoatation = portalCam.transform.rotation.eulerAngles;
-            //portalCamRoatation = new Vector3(portalCamRoatation.x, portalCamRoatation.y, 0);
-
-            //-----------------------------------------------Attempt 2------------------------------------------------------------
-
-            // Make portal cam face same as mainCam, using vector3.forward to lock z axis rotations
-            //portalCam.transform.rotation = Quaternion.LookRotation(mainCam.transform.position += Vector3.forward, Vector3.up);
-
-            //------------------------------------------------Attempt 3------------------------------------------------------------
-
-            var rotationVector = mainCam.transform.rotation.eulerAngles;
-            rotationVector.z = 0;
-            //rotationVector.x = 0;
-            portalCam.transform.rotation = Quaternion.Euler(rotationVector);
-            Debug.Log("portalcam Z rotation:  " + portalCam.transform.rotation.eulerAngles.z);
-
-            //-----------------------------------------------Attempt 4------------------------------------------------------------
-
-            //Quaternion deviceRotation = DeviceRotation.Get;
+            // conerts quaternion maincam rotation to euler maincam rotation
+            // sets z axis of maincam rotation to inverse of xAngle, which is the inverse of device physical rotation
+            // portalcam rotation is set to the this new value, with the z value inverted. this also affects the x rotation.
+            var rotationVector = mainCam.transform.rotation.eulerAngles; 
+            rotationVector.z = xAngle;  
+            portalCam.transform.rotation = Quaternion.Euler(rotationVector.x,rotationVector.y,+rotationVector.z); //succeeded in making the camera rotate more! 90 degrees device rotation == 180 degrees portalcam rotation
 
 
         }else{
@@ -71,10 +41,9 @@ public class Portal : MonoBehaviour {
             // Make portal cam face the same direction as the main camera.
             portalCam.transform.rotation = Quaternion.LookRotation(mainCam.transform.forward, Vector3.up);
         }
-        
-
-
 	}
+
+    //-------------------------------------------------------------------------------------
 
 	void OnTriggerEnter (Collider other) {
 		if (other.CompareTag ("MainCamera")) {
@@ -89,6 +58,31 @@ public class Portal : MonoBehaviour {
 
 		}
 	}
+
+    //-----------------------------------------------------------------------------------------
+
+    // returns the z axis rotation
+
+    float GetAngleByDeviceAxis(Vector3 axis)
+    {
+        Quaternion deviceRotation = DeviceRotation.GetRotation();
+        Quaternion eliminationOfOthers = Quaternion.Inverse(
+            Quaternion.FromToRotation(axis, deviceRotation * axis)
+        );
+        Vector3 filteredEuler = (eliminationOfOthers * deviceRotation).eulerAngles;
+
+        float result = filteredEuler.z;
+        if (axis == Vector3.up)
+        {
+            result = filteredEuler.y;
+        }
+        if (axis == Vector3.right)
+        {
+            // incorporate different euler representations.
+            result = (filteredEuler.y > 90 && filteredEuler.y < 270) ? 180 - filteredEuler.x : filteredEuler.x;
+        }
+        return result;
+    }
 
 
 }

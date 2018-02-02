@@ -161,10 +161,10 @@ PlayerSettings:
     Android: com.Company.ProductName
     Standalone: unity.Unity Technologies.Native Rendering Plugin Example
     Tizen: com.Company.ProductName
-    iOS: com.unity.Portaltesting
+    iOS: com.unity.Portaltesting21
     tvOS: com.Company.ProductName
   buildNumber:
-    iOS: 0
+    iOS: 5
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
